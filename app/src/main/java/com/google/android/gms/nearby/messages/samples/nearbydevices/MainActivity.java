@@ -1,7 +1,13 @@
 package com.google.android.gms.nearby.messages.samples.nearbydevices;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -17,6 +23,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,6 +42,7 @@ import com.google.android.gms.nearby.messages.SubscribeOptions;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -59,7 +67,7 @@ import java.util.UUID;
  * using a {@link Strategy}. When the TTL is reached, a publication or subscription expires.
  */
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener {
+        GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -113,18 +121,39 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
      */
     private ArrayAdapter<String> mNearbyDevicesArrayAdapter;
 
+    private String lat = "0", Long = "0";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String phone = getSharedPreferences(
+                getApplicationContext().getPackageName(), Context.MODE_PRIVATE).getString("readUserMobile","");
+
+        Log.d(TAG, "onCreate: " + phone);
+
+        if(phone == null || phone.isEmpty() || phone.equalsIgnoreCase(""))
+        {
+            Intent intent =  new Intent(this, EditPhoneActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         mSubscribeSwitch = (SwitchCompat) findViewById(R.id.subscribe_switch);
         mPublishSwitch = (SwitchCompat) findViewById(R.id.publish_switch);
 
         // Build the message that is going to be published. This contains the device name and a
         // UUID.
-        mPubMessage = DeviceMessage.newNearbyMessage(getUUID(getSharedPreferences(
-                getApplicationContext().getPackageName(), Context.MODE_PRIVATE)));
+        mPubMessage = DeviceMessage.newNearbyMessage(phone
+                        //+ " " +
+                //lat +"&"+Long
+        );
+
+        //mPubMessage.
+
+        Log.d(TAG, "onCreate: mPubMessage " + mPubMessage.toString());
+
 
         mMessageListener = new MessageListener() {
             @Override
@@ -151,8 +180,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 // onConnected()).
                 if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
                     if (isChecked) {
+                        //Log.d("SDCDCDC", "Subscribe  onCheckedChanged:  checked "  );
                         subscribe();
                     } else {
+                        //Log.d("SDCDCDC", "Subscribe onCheckedChanged:  unchecked "  );
                         unsubscribe();
                     }
                 }
@@ -167,8 +198,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 // onConnected()).
                 if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
                     if (isChecked) {
+                        //Log.d("SDCDCDC", " Publish onCheckedChanged:  checked "  );
                         publish();
                     } else {
+                        //Log.d("SDCDCDC", " Publish onCheckedChanged:  unchecked "  );
                         unpublish();
                     }
                 }
@@ -186,13 +219,37 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             nearbyDevicesListView.setAdapter(mNearbyDevicesArrayAdapter);
         }
         buildGoogleApiClient();
+
+        getLocation();
+
+//        mSubscribeSwitch.setChecked(true);
+//        mPublishSwitch.setChecked(true);
+//
+//        StartPublish();
+//
+//        StartSubscription();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        StartPublish();
+    }
+
+    private  boolean pubSub = true;
+    private void StartSubscription() {
+
+        final Handler handler = new Handler();
+        final int delay = 1000; //milliseconds
+
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                //do something
+                subscribe();
+                handler.postDelayed(this, delay);
+            }
+        }, delay);
+
     }
 
     private void StartPublish() {
@@ -200,8 +257,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         final Handler handler = new Handler();
         final int delay = 1000; //milliseconds
 
-        handler.postDelayed(new Runnable(){
-            public void run(){
+        handler.postDelayed(new Runnable() {
+            public void run() {
                 //do something
                 publish();
                 handler.postDelayed(this, delay);
@@ -321,7 +378,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     @Override
                     public void onResult(@NonNull Status status) {
                         if (status.isSuccess()) {
-                            Log.i(TAG, "Published successfully.");
+                            Log.i(TAG, "Published successfully." + mPubMessage.toString());
                         } else {
                             logAndShowSnackbar("Could not publish, status = " + status);
                             mPublishSwitch.setChecked(false);
@@ -358,4 +415,40 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             Snackbar.make(container, text, Snackbar.LENGTH_LONG).show();
         }
     }
+
+
+    void getLocation() {
+        try {
+            LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, this);
+        }
+        catch(SecurityException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        //locationText.setText("Current Location: " + location.getLatitude() + ", " + location.getLongitude());
+        String strLongitude = Location.convert(location.getLongitude(), Location.FORMAT_DEGREES);
+        String strLatitude = Location.convert(location.getLatitude(), Location.FORMAT_DEGREES);
+        lat = strLatitude;
+        Long = strLongitude;
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+        Toast.makeText(MainActivity.this, "Please Enable GPS ", Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
 }

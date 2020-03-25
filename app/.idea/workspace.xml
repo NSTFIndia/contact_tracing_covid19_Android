@@ -5,11 +5,19 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="onCreate" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="62222265-64ad-45e4-a6b5-2519303040a0" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/EditPhoneActivity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/TurnOnBluetoothActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_move_back_black.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_edit_phone.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_turn_on_bluetooth.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
@@ -17,6 +25,9 @@
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +39,7 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="ZY322HJ5Z8" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_6_API_28" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -38,43 +49,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/MainActivity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="270" column="45" lean-forward="true" selection-start-line="270" selection-start-column="45" selection-end-line="270" selection-end-column="45" />
+            <state relative-caret-position="196">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="41" />
               <folding>
-                <element signature="e#5899#6579#0" expanded="true" />
-                <element signature="e#6578#6579#0" expanded="true" />
-                <element signature="e#8006#8157#0" expanded="true" />
-                <element signature="e#8156#8157#0" expanded="true" />
-                <element signature="e#10519#11031#0" expanded="true" />
-                <element signature="e#11030#11031#0" expanded="true" />
+                <element signature="e#912#945#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_turn_on_bluetooth.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/EditPhoneActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_turn_on_bluetooth.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/TurnOnBluetoothActivity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/DeviceMessage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_edit_phone.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="315">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_move_back_black.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/TurnOnBluetoothActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="373" column="27" lean-forward="true" selection-start-line="373" selection-start-column="27" selection-end-line="373" selection-end-column="27" />
+              <folding>
+                <element signature="e#6794#7641#0" expanded="true" />
+                <element signature="e#7640#7641#0" expanded="true" />
+                <element signature="e#12956#13463#0" expanded="true" />
+                <element signature="e#13462#13463#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,6 +156,23 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>StartPublish</find>
+      <find>mSubscribeSwitch</find>
+      <find>subscribe</find>
+      <find>SharedPre</find>
+      <find>sharedPreferences</find>
+      <find>getUUID</find>
+      <find>onC</find>
+      <find>onCre</find>
+      <find>onCrea</find>
+      <find>mPubli</find>
+      <find>onCreate</find>
+      <find>mP</find>
+      <find>onRes</find>
+      <find>mPub</find>
+      <find>public</find>
+      <find>mPubMessage</find>
+      <find>mMessageListener</find>
+      <find>publi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,7 +181,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/TurnOnBluetoothActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_edit_phone.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/EditPhoneActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/MainActivity.java" />
       </list>
     </option>
@@ -127,6 +222,11 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="nearbydevices" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
+            <path>
+              <item name="contact_tracing_covid19_Android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -139,12 +239,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NearbyMessagesBackgroundBeacons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="com.google.android.gms.nearby.messages.samples.nearbydevices" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.google.android.gms.nearby.messages.samples.nearbydevices" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\AndroidStudioProjects\contact_tracing_covid19_Android\app\src\main\res\drawable" />
+      <recent name="C:\Users\ADMIN\AndroidStudioProjects\contact_tracing_covid19_Android\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -238,7 +345,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.13161875" />
+      <window_info content_ui="combo" id="Project" visible="true" weight="0.13161875" />
       <window_info id="Structure" side_tool="true" />
       <window_info id="Build Variants" side_tool="true" />
       <window_info id="Image Layers" />
@@ -247,21 +354,23 @@
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Run" weight="0.3289689" />
+      <window_info anchor="bottom" id="Logcat" weight="0.4893617" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="Android Profiler" />
       <window_info anchor="bottom" id="Debug" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Find" weight="0.3289689" />
       <window_info anchor="bottom" id="Build" weight="0.3289689" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" weight="0.21482602" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Gradle" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Android WiFi ADB" />
       <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Preview" weight="0.32980332" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -272,28 +381,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="41" />
+          <folding>
+            <element signature="e#912#945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_turn_on_bluetooth.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/TurnOnBluetoothActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="153">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/164255a29a0ce93daad1892e2bfe57df/play-services-nearby-9.0.0/jars/classes.jar!/com/google/android/gms/nearby/messages/Message.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_move_back_black.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/EditPhoneActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_edit_phone.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/google/android/gms/nearby/messages/samples/nearbydevices/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="270" column="45" lean-forward="true" selection-start-line="270" selection-start-column="45" selection-end-line="270" selection-end-column="45" />
+        <state relative-caret-position="296">
+          <caret line="373" column="27" lean-forward="true" selection-start-line="373" selection-start-column="27" selection-end-line="373" selection-end-column="27" />
           <folding>
-            <element signature="e#5899#6579#0" expanded="true" />
-            <element signature="e#6578#6579#0" expanded="true" />
-            <element signature="e#8006#8157#0" expanded="true" />
-            <element signature="e#8156#8157#0" expanded="true" />
-            <element signature="e#10519#11031#0" expanded="true" />
-            <element signature="e#11030#11031#0" expanded="true" />
+            <element signature="e#6794#7641#0" expanded="true" />
+            <element signature="e#7640#7641#0" expanded="true" />
+            <element signature="e#12956#13463#0" expanded="true" />
+            <element signature="e#13462#13463#0" expanded="true" />
           </folding>
         </state>
       </provider>

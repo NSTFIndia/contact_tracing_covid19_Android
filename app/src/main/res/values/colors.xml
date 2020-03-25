@@ -3,4 +3,32 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    -->
+    <color name="white_disabled">#9bffffff</color>
+    <color name="white_50_percent_alpha">#80FFFFFF</color>
+
+    <color name="control_background1">#cc4285f4</color>
+    <!--<color name="colorPrimaryDark">#363a8c</color>-->
+
+    <color name="colorAssessYourself">#00C4D2</color>
+    <color name="colorhelpUsImprove">#FFC85A</color>
+
+    <color name="intro_btn_color">#7E99CD</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_pure">#000000</color>
+    <!--<color name="black">#676767</color>-->
+    <color name="blue">#5CC6F0</color>
+    <color name="navy">#6699FF</color>
+    <color name="sky">#0099CC</color>
+    <color name="red">#E6191A</color>
+    <color name="gray_dark">#4F4F4F</color>
+    <color name="gray">#676767</color>R
+    <color name="gray_light">#EAEAEA</color>
+    <color name="t_reserved">#CF2A27</color>
+    <color name="green">#00B050</color>
+    <color name="black_lite">#4000</color>
+    <color name="black_tick">#9000</color>
+
 </resources>

@@ -10,6 +10,7 @@ public class TurnOnBluetoothActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turn_on_bluetooth);
 
+
     }
 
 }

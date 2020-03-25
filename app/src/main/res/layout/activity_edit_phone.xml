@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgHeaderLeftBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="0x0"
+            android:src="@drawable/ic_move_back_black"
+            />
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black_pure"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDone"
+            android:text="Done"
+            android:textColor="@color/gray_dark"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:theme="@style/EditText"
+            android:id="@+id/edt_Number"
+            android:maxLength="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_pure"
+            android:inputType="numberDecimal"
+            />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

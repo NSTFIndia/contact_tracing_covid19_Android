@@ -18,4 +18,11 @@
         <item name="android:textSize">@dimen/textsize_default</item>
         <item name="android:minHeight">@dimen/min_a11y_dimen</item>
     </style>
+
+    <style name="EditText" parent="AppTheme">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/gray_dark</item>
+        <item name="colorAccent">@color/gray</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
 </resources>
